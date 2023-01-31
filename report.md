@@ -45,5 +45,9 @@ public void testReverseInPlace(){
 ```
 - The above code is a JUnit test that doesn't induce a failure
 
+![Symptom1](Symptom1.png)
+- 
 
+
+![Symptom2](Symptom2.png)
 
