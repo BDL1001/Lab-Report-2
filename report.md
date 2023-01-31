@@ -45,9 +45,20 @@ public void testReverseInPlace(){
 ```
 - The above code is a JUnit test that doesn't induce a failure
 
-![Symptom1](Symptom1.png)
-- 
+![Symptom](Symptom.png)
+- We can see that the input that doesn't induce a failure passed the JUnit test
+- However, for the failure-inducing input, JUnit says that it expected the one of the elements to be the number 1 but saw 3 instead
+- This means that our program returned [3, 2, 3] rather than [3, 2, 1]
 
+![Before](Before.png)
+- This is the code before the bug fix
 
-![Symptom2](Symptom2.png)
+![Before](Fix.png)
+* We can see that within the for loop, the conditional has changed from i < arr.length to i < arr.length / 2
+  * This is because during each iteration the array mimicks "swapping" by assigning the first half of the array with values in the other half
+* We add an int variable called *temp* to save the element that each iteration reassigns
+  * When the first half of the array is reassigned to new values, their old values need to be saved in order to assign them to the back of the array
+* This fix allows the method to iterate through the array a correct amount of time and properly swap values
 
+## Part 3
+* In week 3, I got to learn about a testing framework called JUnit. We had the chance to create some simple test cases in JUnit in order to test different methods that involve manipulating arrays and lists. Before week 3, the most accessible way to test methods/classes for me was to manually input different arguments at a time. Now I can make the test cases ahead of time in JUnit and then run them all at once. 
