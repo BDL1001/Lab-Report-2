@@ -56,6 +56,7 @@ public void testReverseInPlace(){
 ![Before](Fix.png)
 * We can see that within the for loop, the conditional has changed from i < arr.length to i < arr.length / 2
   * This is because during each iteration the array mimicks "swapping" by assigning the first half of the array with values in the other half
+  * Therefore, it only iterates through half of the array
 * We add an int variable called *temp* to save the element that each iteration reassigns
   * When the first half of the array is reassigned to new values, their old values need to be saved in order to assign them to the back of the array
 * This fix allows the method to iterate through the array a correct amount of time and properly swap values
