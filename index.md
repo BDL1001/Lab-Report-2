@@ -1,5 +1,3 @@
-# _Lab Report 2_
-
 ## Part 1
 
 ![StringServer](StringServer.png)
